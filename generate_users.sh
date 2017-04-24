@@ -3,6 +3,13 @@
 # Date: March 5, 2016
 # Description: This bash script takes the list of user accounts from old zimbra server as an argument and creates the corresponding email accounts in the new Zimbra server.
 
+# Check if the file containing email addresses is provided as first argument, else exit the program.
+if [ -z "$1" ]
+then
+	echo "You must provide file containing user addresses as the first argument."
+	exit 1
+fi
+
 domain="your-domain"
 default_password="password@123"
 
